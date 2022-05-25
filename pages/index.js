@@ -1,3 +1,10 @@
+import Header from '../components/Header'
+import { StyledContainer } from '../components/styled/MainContainer'
+
 export default function Home() {
-  return <>Hello World</>
+  return (
+    <StyledContainer>
+      <Header />
+    </StyledContainer>
+  )
 }
