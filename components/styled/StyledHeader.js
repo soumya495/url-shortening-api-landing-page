@@ -1,6 +1,106 @@
 import styled from 'styled-components'
 
-export const StyledHeader = styled.header``
+export const StyledHeader = styled.header`
+  & section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75vh;
+  }
+
+  & .left {
+    width: 50%;
+  }
+
+  & h1 {
+    font-size: 4.75rem;
+    line-height: 1.125;
+    color: ${({ theme }) => theme.ntDarkViolet};
+  }
+
+  & .left > p {
+    max-width: 500px;
+    color: ${({ theme }) => theme.ntViolet};
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  & .right {
+    width: 50%;
+    position: relative;
+  }
+
+  & .right .hero-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -240px;
+  }
+
+  @media (max-width: 1000px) {
+    & .left {
+      width: 55%;
+      padding-right: 1rem;
+    }
+
+    & .right {
+      width: 45%;
+    }
+
+    & h1 {
+      font-size: 3.75rem;
+    }
+
+    & .left > p {
+      font-size: 1.15rem;
+    }
+
+    & .right .hero-img {
+      right: -200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & section {
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    & .left,
+    .right {
+      width: 100%;
+    }
+
+    & .left {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: unset;
+    }
+
+    & h1 {
+      font-size: 2.75rem;
+      text-align: center;
+    }
+
+    & .left > p {
+      text-align: center;
+    }
+
+    & .right .hero-img {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      transform: unset;
+      position: unset;
+      right: unset;
+    }
+  }
+`
 
 export const StyledNav = styled.nav`
   padding-block: 2rem;
@@ -78,6 +178,7 @@ export const StyledNav = styled.nav`
       border-radius: 1.5rem;
       background-color: ${({ theme }) => theme.pmViolet};
       transition: opacity ${({ theme }) => theme.transitionTime} ease;
+      z-index: 999;
     }
 
     & .mobile-menu div {

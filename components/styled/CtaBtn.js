@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const CtaBtn = styled.button`
   border: none;
   outline: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.65rem 1.5rem;
   color: white;
   font-weight: 700;
   background-color: ${({ theme }) => theme.pmCyan};

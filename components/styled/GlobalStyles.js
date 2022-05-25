@@ -10,10 +10,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+  overflow-x:hidden 
+} 
+
 body{
     width: 100%;
     min-height: 100vh;
     font-size: 1.125rem;
+    overflow-x: hidden;
 }
 `
 
