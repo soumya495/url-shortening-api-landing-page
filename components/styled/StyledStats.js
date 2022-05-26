@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledStats = styled.div`
-  padding-top: 8rem;
+  padding-top: 6rem;
 
   & > div h2 {
+    margin-top: 3rem;
     font-size: 2.5rem;
     line-height: 1.125;
     color: ${({ theme }) => theme.ntDarkViolet};
@@ -54,7 +55,7 @@ export const StyledStats = styled.div`
 
   @media (max-width: 768px) {
     & {
-      padding-top: 12rem;
+      padding-top: 6rem;
     }
 
     & > div h2 {

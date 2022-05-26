@@ -5,11 +5,25 @@ import iconRecog from '../assets/icon-brand-recognition.svg'
 import iconRecord from '../assets/icon-detailed-records.svg'
 import iconCust from '../assets/icon-fully-customizable.svg'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import LinkLists from './LinkLists'
 
 function StatsSection() {
+  const [allLinks, setAllLinks] = useState([])
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const localData = localStorage.getItem('localLinks')
+      if (localData) {
+        setAllLinks(JSON.parse(localData))
+      }
+    }
+  }, [])
+
   return (
     <StyledStats>
-      <Form />
+      <Form setAllLinks={setAllLinks} />
+      {allLinks && allLinks.length >= 1 && <LinkLists links={allLinks} />}
       <div>
         <h2>Advanced Statistics</h2>
         <p>
