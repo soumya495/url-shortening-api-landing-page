@@ -73,8 +73,8 @@ function Header() {
         <div className='left'>
           <h1>More than just shorter links</h1>
           <p>
-            Build your brand's recognition and get detailed insights on how your
-            links are performing
+            Build your brand&apos;s recognition and get detailed insights on how
+            your links are performing
           </p>
           <CtaBtn radius='2rem'>Get Started</CtaBtn>
         </div>
