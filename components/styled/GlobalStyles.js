@@ -20,6 +20,11 @@ body{
     font-size: 1.125rem;
     overflow-x: hidden;
 }
+
+#stats{
+  background-color: ${({ theme }) => theme.whiteShmoke};
+}
+
 `
 
 export default GlobalStyle

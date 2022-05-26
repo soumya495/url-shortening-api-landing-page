@@ -6,7 +6,8 @@ export const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 75vh;
+    min-height: 90vh;
+    padding-bottom: 6rem;
   }
 
   & .left {
@@ -39,6 +40,11 @@ export const StyledHeader = styled.header`
   }
 
   @media (max-width: 1000px) {
+    & section {
+      min-height: 70vh;
+      padding-bottom: 6rem;
+    }
+
     & .left {
       width: 55%;
       padding-right: 1rem;
@@ -63,6 +69,8 @@ export const StyledHeader = styled.header`
 
   @media (max-width: 768px) {
     & section {
+      min-height: 90vh;
+      padding-bottom: 6rem;
       flex-direction: column-reverse;
       justify-content: center;
       gap: 2rem;

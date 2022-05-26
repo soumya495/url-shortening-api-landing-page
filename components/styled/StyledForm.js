@@ -3,6 +3,11 @@ import bg from '../../assets/bg-shorten-desktop.svg'
 import mobileBg from '../../assets/bg-shorten-mobile.svg'
 
 export const StyledForm = styled.form`
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-image: url(${bg.src});
   background-size: cover;
   background-color: ${({ theme }) => theme.pmViolet};
@@ -34,9 +39,9 @@ export const StyledForm = styled.form`
     border-radius: 0.45rem;
     border: none;
     outline: ${({ isError }) =>
-      isError ? '3px dotted hsl(0, 87%, 67%)' : 'none'};
+      isError ? '3px dotted hsl(0, 87%, 67%)' : 'unset'};
   }
-  & > input:focus {
+  & > div > input:focus {
     outline: 3px dotted ${({ theme }) => theme.ntGray};
   }
 

@@ -6,5 +6,6 @@ export const theme = {
   ntViolet: 'hsl(257, 7%, 63%)',
   ntBlue: 'hsl(255, 11%, 22%)',
   ntDarkViolet: 'hsl(260, 8%, 14%)',
+  whiteShmoke: 'hsl(225,33%,92%)',
   transitionTime: '300ms',
 }

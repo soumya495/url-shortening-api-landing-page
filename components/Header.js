@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { CtaBtn } from './styled/CtaBtn'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
-import Form from './Form'
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -85,7 +84,6 @@ function Header() {
           </div>
         </div>
       </section>
-      <Form />
     </StyledHeader>
   )
 }
