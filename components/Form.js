@@ -13,7 +13,7 @@ function Form({ setAllLinks }) {
   // function to set data in localStorage
   const setToLocalStorage = (data) => {
     if (typeof window !== undefined) {
-      console.log(data)
+      // console.log(data)
       const { full_short_link, original_link } = data
       const localData = JSON.parse(localStorage.getItem('localLinks'))
       // no data in localStorage
@@ -67,7 +67,7 @@ function Form({ setAllLinks }) {
       setLoading(false)
       setToLocalStorage(data.result)
     } catch {
-      console.log(error)
+      // console.log(error)
     }
 
     inpRef.current.value = ''

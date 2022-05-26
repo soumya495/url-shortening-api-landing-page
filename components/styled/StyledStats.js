@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const StyledStats = styled.div`
   padding-top: 6rem;
+  padding-bottom: 6rem;
 
   & > div h2 {
     margin-top: 3rem;
@@ -56,6 +57,7 @@ export const StyledStats = styled.div`
   @media (max-width: 768px) {
     & {
       padding-top: 6rem;
+      padding-bottom: 3rem;
     }
 
     & > div h2 {
