@@ -10,10 +10,10 @@ export const CtaBtn = styled.button`
   border-radius: ${({ radius }) => radius};
   cursor: pointer;
   letter-spacing: 0.5px;
-  transition: opacity 300ms ease;
+  transition: background-color 300ms ease;
 
   &:hover {
-    opacity: 0.6;
+    background-color: hsl(180, 66%, 70%);
   }
 
   &:focus {
