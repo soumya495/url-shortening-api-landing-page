@@ -64,10 +64,17 @@ function Form({ setAllLinks }) {
         `https://api.shrtco.de/v2/shorten?url=${formData}`
       )
       const data = await res.json()
+      if (!res.ok) {
+        setError('allow')
+        setLoading(false)
+        return
+      }
+      // console.log(res)
       setLoading(false)
       setToLocalStorage(data.result)
-    } catch {
+    } catch (err) {
       // console.log(error)
+      // console.log(err)
     }
 
     inpRef.current.value = ''
@@ -83,6 +90,8 @@ function Form({ setAllLinks }) {
         {isError &&
           (error === 'Empty' ? (
             <p>Please add a link</p>
+          ) : error === 'allow' ? (
+            <p>Not Allowed</p>
           ) : (
             <p>Please enter a valid link</p>
           ))}
